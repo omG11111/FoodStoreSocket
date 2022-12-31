@@ -1,0 +1,23 @@
+{
+  "name": "foodstoresocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "socket.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node socket.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omG11111/FoodStoreSocket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omG11111/FoodStoreSocket/issues"
+  },
+  "homepage": "https://github.com/omG11111/FoodStoreSocket#readme",
+  "dependencies": {
+    "socket.io": "^4.5.4"
+  }
+}
