@@ -52,18 +52,18 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 // const io = new Server(server);
 const io = new Server(server,{cors: {
-  origins: ['*']
+  origins: ['localhost:4200']
 },pingTimeout: 60000});
 // const porrt =process.env.PORT || 3021;
 const socketport =process.env.SOCKET_PORT || 3020;
 const path =require("path");
-const socketname=io.of('/socket');
+// const socketname=io.of('/socket');
 // or
 // io=require("socket.io")(http)
-socketname.use((socket, next) => {
-  // ensure the socket has access to the "users" namespace, and then
-  next();
-});
+// socketname.use((socket, next) => {
+//   // ensure the socket has access to the "users" namespace, and then
+//   next();
+// });
 
 app.get('/', (req, res) => {
     console.log("asdasd");
@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
   res.send("asfda")
 });
 
-socketname.on('connection', (socket) => {
+io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect',()=>{
 
