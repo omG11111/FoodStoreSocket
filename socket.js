@@ -1,12 +1,12 @@
 
-// // Router.get
 // const express = require('express');
-// const Router=express.Router();
-// // const app2 = express();
+// const app = express();
 // const http = require('http');
-// const server = http.createServer(app2);
+// const server = http.createServer(app);
 // const { Server } = require("socket.io");
 // const io = new Server(server);
+// // Router.get
+
 // // const io = new Server(server,{cors: {
 // //   origins: ['http://localhost:4200']
 // // }});
@@ -43,18 +43,18 @@
 
 // Router.get
 
-const serverfile=require('../server');
+// const serverfile=require('../server');
 const express = require('express');
-const Router=express.Router();
-// const app2 = express();
+// const Router=express.Router();
+const app = express();
 const http = require('http');
-const server = http.createServer(serverfile.app);
+const server = http.createServer(app);
 const { Server } = require("socket.io");
 // const io = new Server(server);
 const io = new Server(server,{cors: {
   origins: ['*']
 },pingTimeout: 60000});
-const porrt =process.env.PORT || 3021;
+// const porrt =process.env.PORT || 3021;
 const socketport =process.env.SOCKET_PORT || 3020;
 const path =require("path");
 const socketname=io.of('/socket');
@@ -87,7 +87,7 @@ socketname.on('connection', (socket) => {
     romm=room
   })
   socket.join("room-"+"12")
-  socket.join("room-"+"1")
+  // socket.join("room-"+"1")
   socket.to("room-"+"1").emit('connectToRoom', "You are in room no.1 "+romm+"1"+"ID"+socket.id);
 
   socket.to("room-"+"12").emit('connectToRoom', "You are in room no.12 "+romm+"1"+"ID"+socket.id);
@@ -96,11 +96,11 @@ socketname.on('connection', (socket) => {
 // server.listen(socketport, () => {
 //   console.log(`listening on *:${socketport}`);
 // });
-serverfile.connectDB().then(() => {
-  server.listen(porrt, () => {
-    console.log("listening for requests",porrt);
+// serverfile.connectDB().then(() => {
+  server.listen(socketport, () => {
+    console.log("listening for requests",socketport);
   });
-});
+// });
 module.exports=Router
 
 

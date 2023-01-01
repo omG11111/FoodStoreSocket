@@ -5,7 +5,7 @@
   "main": "socket.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node socket.js"
+    "start": "node socket.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/omG11111/FoodStoreSocket#readme",
   "dependencies": {
-    
+    "mongoose": "^6.8.2"
   }
 }
