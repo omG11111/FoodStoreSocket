@@ -73,7 +73,7 @@ app.get('/', (req, res) => {
     res.send("asfda")
   });
 
-server.on('connection', (socket) => {
+  io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect',()=>{
 
