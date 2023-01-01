@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/omG11111/FoodStoreSocket#readme",
   "dependencies": {
-    "mongoose": "^6.8.2"
+    "mongoose": "^6.8.2",
+    "socket.io": "^4.5.4"
   }
 }
