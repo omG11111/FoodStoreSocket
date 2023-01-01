@@ -67,8 +67,9 @@ socketname.use((socket, next) => {
 
 app.get('/', (req, res) => {
     console.log("asdasd");
-    console.log(path.join(__dirname, '../index.html'));
-  res.sendFile(path.join(__dirname, '../index.html'));
+    // console.log(path.join(__dirname, '../index.html'));
+  // res.sendFile(path.join(__dirname, '../index.html'));
+  res.send("asfda")
 });
 
 socketname.on('connection', (socket) => {
