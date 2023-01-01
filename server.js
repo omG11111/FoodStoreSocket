@@ -58,6 +58,7 @@ const io = new Server(server,{cors: {
 // const porrt =process.env.PORT || 3021;
 const socketport =process.env.SOCKET_PORT || 3022;
 const path =require("path");
+app.use(cors())
 // const socketname=io.of('/socket');
 // or
 // io=require("socket.io")(http)
@@ -71,7 +72,6 @@ app.get('/', (req, res) => {
     // res.sendFile(path.join(__dirname, '../index.html'));
     res.send("asfda")
   });
-  app.use(cors())
 
 server.on('connection', (socket) => {
   console.log('a user connected');
