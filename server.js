@@ -58,18 +58,18 @@ const io = new Server(server,{cors: {
 const socketport =process.env.SOCKET_PORT || 3020;
 const path =require("path");
 const socketname=io.of('/socket');
-//or
-//io=require("socket.io")(http)
+// or
+// io=require("socket.io")(http)
 socketname.use((socket, next) => {
   // ensure the socket has access to the "users" namespace, and then
   next();
 });
 
-// app2.get('/', (req, res) => {
-//     console.log("asdasd");
-//     console.log(path.join(__dirname, '../index.html'));
-//   res.sendFile(path.join(__dirname, '../index.html'));
-// });
+app.get('/', (req, res) => {
+    console.log("asdasd");
+    console.log(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../index.html'));
+});
 
 socketname.on('connection', (socket) => {
   console.log('a user connected');
