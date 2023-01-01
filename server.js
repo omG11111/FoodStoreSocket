@@ -48,6 +48,7 @@ const express = require('express');
 // const Router=express.Router();
 const app = express();
 const http = require('http');
+app.use(cors())
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 // const io = new Server(server);
@@ -58,7 +59,6 @@ const io = new Server(server,{cors: {
 // const porrt =process.env.PORT || 3021;
 const socketport =process.env.SOCKET_PORT || 3022;
 const path =require("path");
-app.use(cors())
 // const socketname=io.of('/socket');
 // or
 // io=require("socket.io")(http)
