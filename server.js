@@ -90,9 +90,9 @@ const path =require("path");
   })
   socket.join("room-"+"12")
   // socket.join("room-"+"1")
-  socket.to("room-"+"1").emit('connectToRoom', "You are in room no.1 "+romm+"1"+"ID"+socket.id);
+  // socket.to("room-"+"1").emit('connectToRoom', "You are in room no.1 "+romm+"1"+"ID"+socket.id);
 
-  socket.to("room-"+"12").emit('connectToRoom', "You are in room no.12 "+romm+"1"+"ID"+socket.id);
+  // socket.to("room-"+"12").emit('connectToRoom', "You are in room no.12 "+romm+"1"+"ID"+socket.id);
 });
 
 // server.listen(socketport, () => {
