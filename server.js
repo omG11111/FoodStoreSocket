@@ -54,6 +54,7 @@ const { Server } = require("socket.io");
 const io = new Server(server,{cors: {
   origins: ['http://localhost:4200']
 }});
+// ,pingTimeout: 60000
 // const porrt =process.env.PORT || 3021;
 const socketport =process.env.SOCKET_PORT || 3022;
 const path =require("path");
@@ -72,7 +73,7 @@ app.get('/', (req, res) => {
   res.send("asfda")
 });
 
-io.on('connection', (socket) => {
+server.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('disconnect',()=>{
 
