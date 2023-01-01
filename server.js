@@ -48,7 +48,7 @@ const express = require('express');
 // const Router=express.Router();
 const app = express();
 const http = require('http');
-app.use(cors())
+// app.use(cors())
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 // const io = new Server(server);
