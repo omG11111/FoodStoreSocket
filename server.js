@@ -66,12 +66,12 @@ const path =require("path");
 //   // ensure the socket has access to the "users" namespace, and then
 //   next();
 // });
-app.get('/', (req, res) => {
-  console.log("asdasd");
-    // console.log(path.join(__dirname, '../index.html'));
-    // res.sendFile(path.join(__dirname, '../index.html'));
-    res.send("asfda")
-  });
+// app.get('/', (req, res) => {
+//   console.log("asdasd");
+//     // console.log(path.join(__dirname, '../index.html'));
+//     // res.sendFile(path.join(__dirname, '../index.html'));
+//     res.send("asfda")
+//   });
 
   io.on('connection', (socket) => {
   console.log('a user connected');
